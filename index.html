@@ -4,81 +4,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GlobalImport S.A.</title>
+    <title>Registro - GlobalImport S.A.</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
- 
+    <!-- Navbar -->
     <nav class="navbar">
         <div class="logo">GlobalImport S.A.</div>
         <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Servicios</a></li>
-            <li><a href="#">Contacto</a></li>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html#servicios">Servicios</a></li>
+            <li><a href="index.html#contacto">Contacto</a></li>
             <li><a href="registro.html" class="cta">Registro</a></li>
         </ul>
     </nav>
 
-  
-    <section class="hero">
-        <div class="hero-content">
-            <h1>GlobalImport S.A.</h1>
-            <p>Tu socio confiable en importación y comercio.</p>
-            <a href="#servicios" class="btn-cta">Descubre nuestros servicios</a>
-        </div>
-    </section>
+    <!-- Formulario de Registro -->
+    <main class="form-container">
+        <h1>Formulario de Registro</h1>
+        <form action="#" method="POST">
+            <!-- Sección A: Datos Personales -->
+            <fieldset>
+                <legend>Datos Personales</legend>
+                <label for="nombre">Nombre Completo *</label>
+                <input type="text" id="nombre" name="nombre" required>
 
+                <label for="fecha-nacimiento">Fecha de Nacimiento *</label>
+                <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" required>
 
-    <section id="servicios" class="services">
-        <h2>Nuestros Servicios</h2>
-        <div class="services-grid">
-            <div class="service-card">
-                <i class="icon">📱</i>
-                <h3>Electrónica</h3>
-                <p>Ofrecemos una amplia gama de productos electrónicos de alta calidad para satisfacer tus necesidades.</p>
-            </div>
-            <div class="service-card">
-                <i class="icon">👗</i>
-                <h3>Indumentaria</h3>
-                <p>Ropa y accesorios de moda importados con los mejores estándares de calidad.</p>
-            </div>
-            <div class="service-card">
-                <i class="icon">🏠</i>
-                <h3>Hogar</h3>
-                <p>Productos para el hogar que combinan funcionalidad y diseño.</p>
-            </div>
-            <div class="service-card">
-                <i class="icon">🚚</i>
-                <h3>Logística</h3>
-                <p>Soluciones logísticas eficientes para garantizar entregas rápidas y seguras.</p>
-            </div>
-        </div>
-    </section>
+                <label for="rut">RUT *</label>
+                <input type="text" id="rut" name="rut" required>
 
-   
-    <section class="why-us">
-        <h2>¿Por qué elegirnos?</h2>
-        <div class="why-us-points">
-            <div class="point">
-                <i class="icon">🤝</i>
-                <h3>Confianza</h3>
-                <p>Construimos relaciones basadas en la confianza y la transparencia.</p>
-            </div>
-            <div class="point">
-                <i class="icon">🏆</i>
-                <h3>Experiencia</h3>
-                <p>Más de 10 años liderando el mercado de importación.</p>
-            </div>
-            <div class="point">
-                <i class="icon">🛒</i>
-                <h3>Variedad</h3>
-                <p>Un catálogo diverso para cubrir todas tus necesidades.</p>
-            </div>
-        </div>
-    </section>
+                <label for="genero">Género *</label>
+                <select id="genero" name="genero" required>
+                    <option value="">Seleccione</option>
+                    <option value="masculino">Masculino</option>
+                    <option value="femenino">Femenino</option>
+                    <option value="otro">Otro</option>
+                </select>
 
- 
+                <label for="nacionalidad">Nacionalidad *</label>
+                <select id="nacionalidad" name="nacionalidad" required>
+                    <option value="">Seleccione</option>
+                    <option value="argentina">Argentina</option>
+                    <option value="mexico">México</option>
+                    <option value="colombia">Colombia</option>
+                    <option value="chile">Chile</option>
+                    <option value="peru">Perú</option>
+                    <option value="venezuela">Venezuela</option>
+                    <option value="brasil">Brasil</option>
+                    <option value="ecuador">Ecuador</option>
+                </select>
+            </fieldset>
+
+            <!-- Sección B: Acceso -->
+            <fieldset>
+                <legend>Acceso</legend>
+                <label for="email">Correo Electrónico *</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="confirm-email">Confirmar Correo Electrónico *</label>
+                <input type="email" id="confirm-email" name="confirm-email" required>
+
+                <label for="password">Contraseña *</label>
+                <input type="password" id="password" name="password" required>
+
+                <label for="confirm-password">Confirmar Contraseña *</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+
+                <label for="telefono">Teléfono *</label>
+                <input type="tel" id="telefono" name="telefono" required>
+            </fieldset>
+
+            <!-- Sección C: Dirección -->
+            <fieldset>
+                <legend>Dirección</legend>
+                <label for="pais">País *</label>
+                <select id="pais" name="pais" required>
+                    <option value="">Seleccione</option>
+                    <option value="argentina">Argentina</option>
+                    <option value="mexico">México</option>
+                    <option value="colombia">Colombia</option>
+                </select>
+
+                <label for="provincia">Provincia *</label>
+                <input type="text" id="provincia" name="provincia" required>
+
+                <label for="ciudad">Ciudad *</label>
+                <input type="text" id="ciudad" name="ciudad" required>
+
+                <label for="calle">Calle *</label>
+                <input type="text" id="calle" name="calle" required>
+
+                <label for="cp">Código Postal *</label>
+                <input type="text" id="cp" name="cp" required>
+
+                <label for="instrucciones">Instrucciones (máx. 200 caracteres)</label>
+                <textarea id="instrucciones" name="instrucciones" maxlength="200"></textarea>
+            </fieldset>
+
+            <!-- Sección D: Preferencias -->
+            <fieldset>
+                <legend>Preferencias</legend>
+                <p>Selecciona tus intereses:</p>
+                <label><input type="checkbox" name="intereses" value="electronica"> Electrónica</label>
+                <label><input type="checkbox" name="intereses" value="moda"> Moda</label>
+                <label><input type="checkbox" name="intereses" value="hogar"> Hogar</label>
+
+                <p>Tipo de Cliente:</p>
+                <label><input type="radio" name="tipo-cliente" value="particular" required> Particular</label>
+                <label><input type="radio" name="tipo-cliente" value="empresa"> Empresa</label>
+
+                <p>Aceptación:</p>
+                <label><input type="checkbox" name="terminos" required> Acepto los términos y condiciones *</label>
+                <label><input type="checkbox" name="privacidad" required> Acepto la política de privacidad *</label>
+            </fieldset>
+
+            <!-- Botones -->
+            <div class="form-buttons">
+                <button type="submit">Registrarme</button>
+                <button type="reset">Limpiar formulario</button>
+            </div>
+        </form>
+    </main>
+
+    <!-- Footer -->
     <footer class="footer">
         <p>&copy; 2026 GlobalImport S.A. Todos los derechos reservados.</p>
         <div class="social-links">
