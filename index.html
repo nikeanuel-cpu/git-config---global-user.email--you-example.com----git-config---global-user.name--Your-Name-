@@ -7,6 +7,7 @@
     <title>Registro - GlobalImport S.A.</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+  
 </head>
 <body>
     <!-- Navbar -->
@@ -29,12 +30,17 @@
                 <legend>Datos Personales</legend>
                 <label for="nombre">Nombre Completo *</label>
                 <input type="text" id="nombre" name="nombre" required>
+                <span class="error-mensaje"></span> <!-- Agregado -->
 
                 <label for="fecha-nacimiento">Fecha de Nacimiento *</label>
                 <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" required>
+                <span class="error-mensaje"></span> <!-- Agregado -->
+
 
                 <label for="rut">RUT *</label>
                 <input type="text" id="rut" name="rut" required>
+                <span class="error-mensaje"></span> <!-- Agregado -->
+
 
                 <label for="genero">Género *</label>
                 <select id="genero" name="genero" required>
@@ -102,6 +108,8 @@
 
                 <label for="instrucciones">Instrucciones (máx. 200 caracteres)</label>
                 <textarea id="instrucciones" name="instrucciones" maxlength="200"></textarea>
+                <span class="error-mensaje"></span> <!-- Agregado -->
+<span id="contador-caracteres">0/200</span> <!-- Contador de caracteres -->
             </fieldset>
 
             <!-- Sección D: Preferencias -->
@@ -129,15 +137,17 @@
         </form>
     </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; 2026 GlobalImport S.A. Todos los derechos reservados.</p>
-        <div class="social-links">
-            <a href="#">Facebook</a>
-            <a href="#">Twitter</a>
-            <a href="#">LinkedIn</a>
-        </div>
-        <p>Contacto: info@globalimport.com | Tel: +1 234 567 890</p>
-    </footer>
+            <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2026 GlobalImport S.A. Todos los derechos reservados.</p>
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">LinkedIn</a>
+            </div>
+            <p>Contacto: info@globalimport.com | Tel: +1 234 567 890</p>
+        </footer>
+        <script src="validaciones.js"></script>
+    </body>
 </body>
 </html>

@@ -38,3 +38,20 @@ input:focus, select:focus, textarea:focus {
     display: flex;
     justify-content: space-between;
 }
+/* Campo con error */
+.campo-error {
+    border: 2px solid red;
+}
+
+/* Campo válido */
+.campo-ok {
+    border: 2px solid green;
+}
+
+/* Mensaje de error */
+.error-mensaje {
+    color: red;
+    font-size: 0.9em;
+    display: block;
+    margin-top: 5px;
+}
