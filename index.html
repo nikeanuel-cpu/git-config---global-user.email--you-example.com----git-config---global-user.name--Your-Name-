@@ -1,66 +1,92 @@
 
-</html><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Globalimport</title>
-    <style>
-        /* Estilos básicos para la barra de navegación */
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #333;
-            padding: 10px 20px;
-            color: white;
-        }
-        .navbar .logo {
-            font-size: 1.5em;
-            font-weight: bold;
-        }
-        .navbar ul {
-            list-style: none;
-            display: flex;
-            margin: 0;
-            padding: 0;
-        }
-        .navbar ul li {
-            margin: 0 10px;
-        }
-        .navbar ul li a {
-            text-decoration: none;
-            color: white;
-            transition: color 0.3s;
-        }
-        .navbar ul li a:hover {
-            color: #00bcd4;
-        }
-        /* Estilos responsivos */
-        @media (max-width: 600px) {
-            .navbar ul {
-                flex-direction: column;
-                align-items: center;
-            }
-            .navbar ul li {
-                margin: 5px 0;
-            }
-        }
-    </style>
+    <title>GlobalImport S.A.</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+ 
     <nav class="navbar">
-        <div class="logo">Mi Empresa</div>
+        <div class="logo">GlobalImport S.A.</div>
         <ul>
             <li><a href="#">Inicio</a></li>
             <li><a href="#">Servicios</a></li>
             <li><a href="#">Contacto</a></li>
-            <li><a href="registro.html">Registro</a></li>
+            <li><a href="registro.html" class="cta">Registro</a></li>
         </ul>
     </nav>
+
+  
+    <section class="hero">
+        <div class="hero-content">
+            <h1>GlobalImport S.A.</h1>
+            <p>Tu socio confiable en importación y comercio.</p>
+            <a href="#servicios" class="btn-cta">Descubre nuestros servicios</a>
+        </div>
+    </section>
+
+
+    <section id="servicios" class="services">
+        <h2>Nuestros Servicios</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="icon">📱</i>
+                <h3>Electrónica</h3>
+                <p>Ofrecemos una amplia gama de productos electrónicos de alta calidad para satisfacer tus necesidades.</p>
+            </div>
+            <div class="service-card">
+                <i class="icon">👗</i>
+                <h3>Indumentaria</h3>
+                <p>Ropa y accesorios de moda importados con los mejores estándares de calidad.</p>
+            </div>
+            <div class="service-card">
+                <i class="icon">🏠</i>
+                <h3>Hogar</h3>
+                <p>Productos para el hogar que combinan funcionalidad y diseño.</p>
+            </div>
+            <div class="service-card">
+                <i class="icon">🚚</i>
+                <h3>Logística</h3>
+                <p>Soluciones logísticas eficientes para garantizar entregas rápidas y seguras.</p>
+            </div>
+        </div>
+    </section>
+
+   
+    <section class="why-us">
+        <h2>¿Por qué elegirnos?</h2>
+        <div class="why-us-points">
+            <div class="point">
+                <i class="icon">🤝</i>
+                <h3>Confianza</h3>
+                <p>Construimos relaciones basadas en la confianza y la transparencia.</p>
+            </div>
+            <div class="point">
+                <i class="icon">🏆</i>
+                <h3>Experiencia</h3>
+                <p>Más de 10 años liderando el mercado de importación.</p>
+            </div>
+            <div class="point">
+                <i class="icon">🛒</i>
+                <h3>Variedad</h3>
+                <p>Un catálogo diverso para cubrir todas tus necesidades.</p>
+            </div>
+        </div>
+    </section>
+
+ 
+    <footer class="footer">
+        <p>&copy; 2026 GlobalImport S.A. Todos los derechos reservados.</p>
+        <div class="social-links">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">LinkedIn</a>
+        </div>
+        <p>Contacto: info@globalimport.com | Tel: +1 234 567 890</p>
+    </footer>
 </body>
 </html>
