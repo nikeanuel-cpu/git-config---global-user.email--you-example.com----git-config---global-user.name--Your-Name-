@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulario de registro en GlobalImport S.A.">
+    <title>Registro - GlobalImport S.A.</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- BARRA DE NAVEGACIÓN -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <i class="fas fa-globe"></i>
+                <span>GlobalImport S.A.</span>
+            </div>
+            
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html#inicio" class="nav-link">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#servicios" class="nav-link">Servicios</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#contacto" class="nav-link">Contacto</a>
+                </li>
+                <li class="nav-item">
+                    <a href="registro.html" class="nav-link nav-link-registro">Registro</a>
+                </li>
+            </ul>
+            
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CONTENEDOR DEL FORMULARIO -->
+    <main class="form-container">
+        <div class="form-header">
+            <h1>Crear mi Cuenta</h1>
+            <p>Completa el formulario para registrarte en GlobalImport S.A.</p>
+        </div>
+
+        <form id="registroForm" method="POST" action="#" novalidate>
+            
+            <!-- SECCIÓN A: DATOS PERSONALES -->
+            <fieldset class="form-section">
+                <legend class="section-title">
+                    <i class="fas fa-user"></i> Datos Personales
+                </legend>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nombre">Nombre Completo <span class="required">*</span></label>
+                        <input type="text" id="nombre" name="nombre" required aria-required="true" placeholder="Ej: Juan García López">
+                        <small class="error-message" id="error-nombre"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="fecha-nacimiento">Fecha de Nacimiento <span class="required">*</span></label>
+                        <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" required aria-required="true">
+                        <small class="error-message" id="error-fecha"></small>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="rut">RUT / Número de Documento <span class="required">*</span></label>
+                        <input type="text" id="rut" name="rut" required aria-required="true" placeholder="Ej: 12.345.678-9">
+                        <small class="error-message" id="error-rut"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="genero">Género <span class="required">*</span></label>
+                        <select id="genero" name="genero" required aria-required="true">
+                            <option value="">-- Seleccionar --</option>
+                            <option value="masculino">Masculino</option>
+                            <option value="femenino">Femenino</option>
+                            <option value="no-binario">No binario</option>
+                            <option value="prefiero-no-decir">Prefiero no decir</option>
+                        </select>
+                        <small class="error-message" id="error-genero"></small>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group full-width">
+                        <label for="nacionalidad">Nacionalidad <span class="required">*</span></label>
+                        <select id="nacionalidad" name="nacionalidad" required aria-required="true">
+                            <option value="">-- Seleccionar país --</option>
+                            <option value="argentina">Argentina</option>
+                            <option value="chile">Chile</option>
+                            <option value="colombia">Colombia</option>
+                            <option value="ecuador">Ecuador</option>
+                            <option value="mexico">México</option>
+                            <option value="peru">Perú</option>
+                            <option value="uruguay">Uruguay</option>
+                            <option value="venezuela">Venezuela</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                        <small class="error-message" id="error-nacionalidad"></small>
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- SECCIÓN B: DATOS DE CONTACTO Y ACCESO -->
+            <fieldset class="form-section">
+                <legend class="section-title">
+                    <i class="fas fa-lock"></i> Datos de Contacto y Acceso
+                </legend>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" required aria-required="true" placeholder="tu.email@ejemplo.com">
+                        <small class="error-message" id="error-email"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email-confirm">Confirmar Correo Electrónico <span class="required">*</span></label>
+                        <input type="email" id="email-confirm" name="email-confirm" required aria-required="true" placeholder="Confirma tu email">
+                        <small class="error-message" id="error-email-confirm"></small>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="password">Contraseña <span class="required">*</span></label>
+                        <div class="password-wrapper">
+                            <input type="password" id="password" name="password" required aria-required="true" placeholder="Mínimo 8 caracteres">
+                            <button type="button" class="password-toggle" aria-label="Mostrar/Ocultar contraseña">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                        <div class="password-strength">
+                            <span class="strength-meter" id="strength-meter"></span>
+                        </div>
+                        <small class="password-hint">Usa mayúsculas, minúsculas, números y símbolos</small>
+                        <small class="error-message" id="error-password"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password-confirm">Confirmar Contraseña <span class="required">*</span></label>
+                        <div class="password-wrapper">
+                            <input type="password" id="password-confirm" name="password-confirm" required aria-required="true" placeholder="Confirma tu contraseña">
+                            <button type="button" class="password-toggle" aria-label="Mostrar/Ocultar contraseña">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                        <small class="error-message" id="error-password-confirm"></small>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group full-width">
+                        <label for="telefono">Teléfono <span class="required">*</span></label>
+                        <input type="tel" id="telefono" name="telefono" required aria-required="true" placeholder="+54 (123) 456-7890">
+                        <small class="error-message" id="error-telefono"></small>
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- SECCIÓN C: DIRECCIÓN DE ENTREGA -->
+            <fieldset class="form-section">
+                <legend class="section-title">
+                    <i class="fas fa-map-marker-alt"></i> Dirección de Entrega
+                </legend>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="pais">País <span class="required">*</span></label>
+                        <select id="pais" name="pais" required aria-required="true">
+                            <option value="">-- Seleccionar país --</option>
+                            <option value="argentina">Argentina</option>
+                            <option value="chile">Chile</option>
+                            <option value="colombia">Colombia</option>
+                            <option value="ecuador">Ecuador</option>
+                            <option value="mexico">México</option>
+                            <option value="peru">Perú</option>
+                            <option value="uruguay">Uruguay</option>
+                            <option value="venezuela">Venezuela</option>
+                        </select>
+                        <small class="error-message" id="error-pais"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="provincia">Provincia / Estado <span class="required">*</span></label>
+                        <input type="text" id="provincia" name="provincia" required aria-required="true" placeholder="Ej: Buenos Aires">
+                        <small class="error-message" id="error-provincia"></small>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="ciudad">Ciudad <span class="required">*</span></label>
+                        <input type="text" id="ciudad" name="ciudad" required aria-required="true" placeholder="Ej: La Plata">
+                        <small class="error-message" id="error-ciudad"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="calle">Calle y Número <span class="required">*</span></label>
+                        <input type="text" id="calle" name="calle" required aria-required="true" placeholder="Ej: Av. Siempre Viva 742">
+                        <small class="error-message" id="error-calle"></small>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="codigo-postal">Código Postal <span class="required">*</span></label>
+                        <input type="text" id="codigo-postal" name="codigo-postal" required aria-required="true" placeholder="Ej: 1900">
+                        <small class="error-message" id="error-codigo-postal"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="piso-depto">Piso y Departamento <span class="optional">(Opcional)</span></label>
+                        <input type="text" id="piso-depto" name="piso-depto" placeholder="Ej: Piso 3, Depto. B">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group full-width">
+                        <label for="referencia">Referencia o Instrucciones Adicionales <span class="optional">(Opcional - Máx. 200 caracteres)</span></label>
+                        <textarea id="referencia" name="referencia" maxlength="200" placeholder="Ej: Puerta de atrás, perro en el patio..."></textarea>
+                        <div class="char-counter">
+                            <span id="char-count">0</span>/200
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- SECCIÓN D: PREFERENCIAS Y TÉRMINOS -->
+            <fieldset class="form-section">
+                <legend class="section-title">
+                    <i class="fas fa-cog"></i> Preferencias y Términos
+                </legend>
+
+                <!-- Categorías de interés -->
+                <div class="form-group full-width">
+                    <label class="group-title">Categorías de Interés</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="intereses" value="electronica">
+                            <span>Electrónica</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="intereses" value="indumentaria">
+                            <span>Indumentaria</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="intereses" value="hogar">
+                            <span>Hogar</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="intereses" value="otros">
+                            <span>Otros</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Tipo de cliente -->
+                <div class="form-group full-width">
+                    <label class="group-title">Tipo de Cliente <span class="required">*</span></label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="tipo-cliente" value="consumidor" required>
+                            <span>Consumidor final</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="tipo-cliente" value="revendedor" required>
+                            <span>Revendedor</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="tipo-cliente" value="empresa" required>
+                            <span>Empresa</span>
+                        </label>
+                    </div>
+                    <small class="error-message" id="error-tipo-cliente"></small>
+                </div>
+
+                <!-- Cómo nos conociste -->
+                <div class="form-row">
+                    <div class="form-group full-width">
+                        <label for="como-nos-conociste">¿Cómo nos conociste?</label>
+                        <select id="como-nos-conociste" name="como-nos-conociste">
+                            <option value="">-- Seleccionar --</option>
+                            <option value="redes-sociales">Redes sociales</option>
+                            <option value="recomendacion">Recomendación</option>
+                            <option value="busqueda-web">Búsqueda web</option>
+                            <option value="publicidad">Publicidad</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Suscripción al newsletter -->
+                <div class="form-group full-width">
+                    <label class="checkbox-label checkbox-large">
+                        <input type="checkbox" name="newsletter" value="si">
+                        <span>Deseo recibir ofertas y novedades por email (Newsletter)</span>
+                    </label>
+                </div>
+
+                <!-- Aceptación de términos -->
+                <div class="form-group full-width">
+                    <label class="checkbox-label checkbox-large checkbox-required">
+                        <input type="checkbox" name="terminos" id="terminos" required aria-required="true">
+                        <span>Acepto los <a href="#" target="_blank">términos y condiciones</a> <span class="required">*</span></span>
+                    </label>
+                    <small class="error-message" id="error-terminos"></small>
+                </div>
+
+                <!-- Aceptación de privacidad -->
+                <div class="form-group full-width">
+                    <label class="checkbox-label checkbox-large checkbox-required">
+                        <input type="checkbox" name="privacidad" id="privacidad" required aria-required="true">
+                        <span>Acepto la <a href="#" target="_blank">política de privacidad</a> <span class="required">*</span></span>
+                    </label>
+                    <small class="error-message" id="error-privacidad"></small>
+                </div>
+            </fieldset>
+
+            <!-- BOTONES DE ACCIÓN -->
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-check"></i> Registrarme
+                </button>
+                <button type="reset" class="btn btn-secondary">
+                    <i class="fas fa-redo"></i> Limpiar Formulario
+                </button>
+            </div>
+
+            <!-- Enlace de inicio de sesión -->
+            <div class="form-login-link">
+                <p>¿Ya tienes cuenta? <a href="#">Inicia sesión aquí</a></p>
+            </div>
+        </form>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>GlobalImport S.A.</h4>
+                    <p>&copy; 2026 GlobalImport S.A. Todos los derechos reservados.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Redes Sociales</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook" title="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" aria-label="LinkedIn" title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" aria-label="Twitter" title="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" aria-label="Instagram" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contacto Rápido</h4>
+                    <p>Email: <a href="mailto:contacto@globalimport.com">contacto@globalimport.com</a></p>
+                    <p>Tel: <a href="tel:+541234567890">+54 (123) 456-7890</a></p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>Desarrollado con <i class="fas fa-heart"></i> por GlobalImport S.A.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="script.js"></script>
+    <script src="formulario.js"></script>
+</body>
+</html>
